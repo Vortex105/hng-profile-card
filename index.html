@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile-card</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<article data-testid="test-profile-card">
+			<section class="top" data-testid="test-user-section">
+				<div class="left" data-testid="test-user-avatar-section">
+					<img
+						src="assets/avatar.jpg"
+						alt="userAvatar"
+						data-testid="test-user-avatar"
+					/>
+				</div>
+				<div class="right" data-testid="test-user-info">
+					<h2 data-testid="test-user-name">John Doe</h2>
+					<p data-testid="test-user-bio">
+						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum
+						nostrum cupiditate, unde dolorem praesentium aperiam laborum
+						adipisci repellat ullam minus, corporis, nobis aliquid perspiciatis
+						quis?
+					</p>
+				</div>
+			</section>
+			<section class="middle" data-testid="test-user-interests">
+				<div class="hobbies" data-testid="test-user-hobbies">
+					<h3>Hobbies</h3>
+					<ul data-testid="test-user-hobbies-list">
+						<li>Reading</li>
+						<li>Coding</li>
+						<li>Sleeping</li>
+						<li>Gaming</li>
+					</ul>
+				</div>
+				<div class="dislikes" data-testid="test-user-dislikes">
+					<h3>Dislikes</h3>
+					<ul data-testid="test-user-dislikes-list">
+						<li>Reading</li>
+						<li>Coding</li>
+						<li>Sleeping</li>
+						<li>Gaming</li>
+					</ul>
+				</div>
+			</section>
+			<section class="bottom" data-testid="test-user-socials">
+				<div class="socials" data-testid="test-user-social">
+					<a href="#" data-testid="test-user-social-instagram"
+						><img src="assets/mdi--instagram.svg" alt=""
+					/></a>
+					<a href="#" data-testid="test-user-social-pinterest"
+						><img src="assets/mdi--pinterest.svg" alt=""
+					/></a>
+					<a href="#" data-testid="test-user-social-facebook"
+						><img src="assets/ic--baseline-facebook.svg"
+					/></a>
+					<a href="#" data-testid="test-user-social-x"
+						><img src="assets/ri--twitter-x-line.svg" alt=""
+					/></a>
+				</div>
+			</section>
+		</article>
+	</body>
+</html>
