@@ -16,7 +16,7 @@ You can also run it using a local development server (for example, VS Code Live 
 Clone the repo and open the demo:
 ```
 git clone https://github.com/Vortex105/hng-profile-card
-cd profile-card
+cd hng-profile-card
 open index.html
 ```
 
