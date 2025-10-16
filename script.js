@@ -12,6 +12,13 @@ const avatarImg = document.querySelector('#userAvatar');
 
 avatarImg.addEventListener('click', () => avatarInput.click());
 
+avatarImg.addEventListener('keydown', (e) => {
+	if (e.key === 'Enter' || e.key === ' ') {
+		e.preventDefault();
+		avatarInput.click();
+	}
+});
+
 avatarInput.addEventListener('change', (e) => {
 	const file = e.target.files[0];
 	if (!file) return;

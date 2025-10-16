@@ -129,7 +129,8 @@ article[data-testid='test-profile-card'] {
 	transition: opacity 0.3s ease;
 }
 
-.left:hover::after {
+.left:hover::after,
+.left:focus-within::after {
 	opacity: 1;
 }
 
