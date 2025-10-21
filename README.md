@@ -4,9 +4,11 @@ A small, responsive profile card component built with HTML and CSS (optionally J
 
 ## Features
 - Responsive layout
+- Multi-page navigation (Home, About, Contact)
 - Avatar, name, title, bio, and social links
 - Easy to customize (colors, spacing, fonts)
 - Lightweight — no frameworks required
+- Seamless page transitions
 
 ## Demo
 Open `index.html` in a browser to view the component locally.
@@ -25,16 +27,28 @@ open index.html
 - Change colors in `:root` (CSS variables)
 - Swap avatar image in `assets/`
 - Adjust font-family in `styles.css`
-- Add simple interactions with `script.js` (optional)
+- Add simple interactions with `script.js`
+- Modify page-specific styles in respective CSS files
+- Customize contact form functionality in `contact.js`
 
 ## Project structure
 ```
 /profile-card
-├─ index.html
-├─ styles.css
-├─ script.js (optional)
+├─ index.html      # Main profile page
+├─ about.html      # About page
+├─ contact.html    # Contact page
+├─ css/
+│  ├─ styles.css   # Main styles
+│  ├─ about.css    # About page styles
+│  └─ contact.css  # Contact page styles
+├─ script.js       # Main JavaScript
+├─ contact.js      # Contact page JavaScript
 ├─ assets/
-│  └─ avatar.jpg
+│  ├─ avatar.jpg
+│  ├─ mdi--instagram.svg
+│  ├─ mdi--pinterest.svg
+│  ├─ ic--baseline-facebook.svg
+│  └─ ri--twitter-x-line.svg
 └─ README.md
 ```
 

@@ -1,0 +1,215 @@
+/* ==========================
+   Base Variables
+========================== */
+:root {
+	/* Light theme (default) */
+	--bg: #f6f8fb;
+	--card: #ffffff;
+	--muted: #556170;
+	--accent: #2563eb;
+	--accent-600: #1e40af;
+	--radius: 12px;
+	--max-width: 920px;
+	--pad: 20px;
+	--text: #1f2937;
+}
+
+/* ==========================
+   Dark Mode Support
+========================== */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0f172a;
+		--card: #1e293b;
+		--muted: #cbd5e1;
+		--accent: #60a5fa;
+		--accent-600: #3b82f6;
+		--text: #f1f5f9;
+	}
+}
+
+/* ==========================
+   Page Layout
+========================== */
+main[data-testid='test-about-page'] {
+	max-width: var(--max-width);
+	margin: 36px auto;
+	padding: var(--pad);
+	background: linear-gradient(180deg, var(--bg), #eef2ff);
+	color: var(--text);
+	transition: background 0.3s ease, color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+	main[data-testid='test-about-page'] {
+		background: linear-gradient(180deg, var(--bg), #1e293b);
+	}
+}
+
+/* ==========================
+   Profile Block
+========================== */
+section[data-testid='test-main-profile'] {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	background: var(--card);
+	padding: 20px;
+	border-radius: var(--radius);
+	box-shadow: 0 8px 30px rgba(16, 24, 40, 0.06);
+	transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+section[data-testid='test-main-profile']
+	img[data-testid='test-profile-picture'] {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 3px solid rgba(37, 99, 235, 0.12);
+}
+
+.bio h1 {
+	color: var(--accent-600);
+	font-size: 1.6rem;
+	margin-bottom: 8px;
+}
+
+.bio p {
+	color: var(--muted);
+	line-height: 1.6;
+	margin-bottom: 8px;
+}
+
+/* ==========================
+   Section Cards
+========================== */
+
+.goals,
+.confidence,
+.note,
+.extra {
+	margin-top: 18px;
+	background: var(--card);
+	padding: 18px;
+	border-radius: var(--radius);
+	box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+	transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goals h2,
+.confidence h2,
+.note h2,
+.extra h2 {
+	color: var(--accent);
+	font-size: 1.1rem;
+	margin-bottom: 10px;
+}
+
+.goals ul,
+.confidence ul {
+	list-style: disc;
+	margin-left: 20px;
+	color: var(--muted);
+}
+
+.goals li,
+.confidence li {
+	margin-bottom: 8px;
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 700px) {
+	section[data-testid='test-main-profile'] {
+		flex-direction: column;
+		text-align: center;
+	}
+	.bio h1 {
+		margin-top: 8px;
+	}
+	main[data-testid='test-about-page'] {
+		padding: 14px;
+	}
+}
+
+/* ==========================
+   Small Utilities
+========================== */
+p,
+li {
+	word-wrap: break-word;
+}
+
+/* ==========================
+   Accessibility Focus
+========================== */
+:focus {
+	outline: 3px solid rgba(37, 99, 235, 0.3);
+	outline-offset: 2px;
+}
+
+/* ==========================
+   Footer Styles
+========================== */
+.about-footer {
+	margin-top: 32px;
+	padding: 24px;
+	background: var(--card);
+	border-radius: var(--radius);
+	box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 16px;
+	transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-footer p {
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+
+.about-footer a {
+	color: var(--accent);
+	text-decoration: none;
+	font-size: 0.9rem;
+	padding: 8px 16px;
+	border-radius: var(--radius);
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.about-footer a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--accent);
+	transition: width 0.3s ease;
+}
+
+.about-footer a:hover {
+	color: var(--accent-600);
+}
+
+.about-footer a:hover::after {
+	width: 100%;
+}
+
+@media (max-width: 600px) {
+	.about-footer {
+		flex-direction: column;
+		text-align: center;
+		padding: 20px;
+	}
+
+	.about-footer p {
+		width: 100%;
+		margin-bottom: 12px;
+	}
+}

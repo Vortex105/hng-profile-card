@@ -1,0 +1,130 @@
+:root {
+	--bg: #ffffff;
+	--text: #111827;
+	--surface: #f9fafb;
+	--primary: #2563eb;
+	--primary-hover: #1d4ed8;
+
+	--success-bg: #d1fae5;
+	--success-text: #065f46;
+	--error-bg: #fee2e2;
+	--error-text: #991b1b;
+
+	--radius: 8px;
+	--shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #0f172a;
+		--text: #e2e8f0;
+		--surface: #1e293b;
+		--primary: #3b82f6;
+		--primary-hover: #60a5fa;
+
+		--success-bg: #064e3b;
+		--success-text: #a7f3d0;
+		--error-bg: #7f1d1d;
+		--error-text: #fecaca;
+	}
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	background-color: var(--bg);
+	color: var(--text);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 1rem;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 420px;
+	gap: 0.75rem;
+	padding: 1.25rem;
+	background-color: var(--surface);
+	border-radius: var(--radius);
+	box-shadow: var(--shadow);
+}
+
+label {
+	font-size: 0.9rem;
+	opacity: 0.85;
+}
+
+input,
+textarea {
+	width: 100%;
+	padding: 0.7rem;
+	border-radius: var(--radius);
+	border: 1px solid #e5e7eb;
+	font-size: 1rem;
+	background: #fff;
+	color: var(--text);
+}
+
+@media (prefers-color-scheme: dark) {
+	input,
+	textarea {
+		background: #334155;
+		border-color: #475569;
+		color: #e2e8f0;
+	}
+}
+
+textarea {
+	min-height: 100px;
+	resize: none;
+}
+
+input:focus,
+textarea:focus {
+	border-color: var(--primary);
+	outline: none;
+}
+
+button {
+	padding: 0.8rem;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #fff;
+	background-color: var(--primary);
+	border: none;
+	border-radius: var(--radius);
+	cursor: pointer;
+	transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+button:hover,
+button:focus {
+	background-color: var(--primary-hover);
+	transform: translateY(-1px);
+}
+
+.message {
+	margin-top: 0.75rem;
+	padding: 0.75rem;
+	border-radius: var(--radius);
+	font-size: 0.9rem;
+	display: none;
+}
+
+.message.show {
+	display: block;
+}
+
+.success {
+	background-color: var(--success-bg);
+	color: var(--success-text);
+}
+
+.error {
+	background-color: var(--error-bg);
+	color: var(--error-text);
+}

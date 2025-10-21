@@ -35,6 +35,46 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+/* Navigation Links */
+.navlinks {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 2rem;
+	margin-bottom: 1.5rem;
+}
+
+.navlinks a {
+	width: 50%;
+	text-align: center;
+	color: var(--subtext-color);
+	text-decoration: none;
+	padding: 0.5rem 0;
+	position: relative;
+	transition: all 0.3s ease;
+}
+
+.navlinks a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: var(--accent-color);
+	transition: width 0.3s ease;
+}
+
+.navlinks a:hover,
+.navlinks a:focus-visible {
+	color: var(--accent-color);
+}
+
+.navlinks a:hover::after,
+.navlinks a:focus-visible::after {
+	width: 100%;
+}
+
 body {
 	background: var(--bg-gradient);
 	color: var(--text-color);

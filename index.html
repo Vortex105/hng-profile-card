@@ -4,12 +4,20 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Profile Card</title>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="/css/styles.css" />
 		<script src="script.js" defer></script>
 	</head>
 
 	<body>
 		<article data-testid="test-profile-card">
+			<nav
+				class="navlinks"
+				aria-label="Profile navigation links"
+				data-testid="test-nav-links"
+			>
+				<a href="about.html" data-testid="test-nav-about">About</a>
+				<a href="contact.html" data-testid="test-nav-contact">Contact</a>
+			</nav>
 			<header class="top">
 				<figure class="left">
 					<img
